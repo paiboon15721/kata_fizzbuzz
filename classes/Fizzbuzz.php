@@ -9,8 +9,10 @@ class Fizzbuzz {
 	function getResult() {
 		if ($this->number == 1) {
 			return 1;
-		} else {
+		} elseif($this->number == 2) {
 			return '1, 2';
+		} else {
+			return '1, 2, fizz';
 		}
 	}
 }
