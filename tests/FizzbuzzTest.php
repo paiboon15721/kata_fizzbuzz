@@ -22,4 +22,5 @@ class FizzbuzzTest extends PHPUnit_Framework_TestCase {
 		$actual = $fizzbuzz->getResult();
 		$this->assertEquals($expect, $actual);
 	}
+	tetse
 }
