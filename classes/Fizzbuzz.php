@@ -7,6 +7,10 @@ class Fizzbuzz {
 	}
 
 	function getResult() {
+		if(!is_numeric($this->number)) {
+			throw new InvalidArgumentException;
+		}
+		
 		if ($this->number == 1) {
 			return 1;
 		} elseif($this->number == 2) {

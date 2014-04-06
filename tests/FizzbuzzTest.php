@@ -2,6 +2,14 @@
 require_once 'vendor/autoload.php'; 
 class FizzbuzzTest extends PHPUnit_Framework_TestCase {
 
+	/**
+		*@expectedException InvalidArgumentException
+		*/
+	function testRequiresNumericValue() {
+		$fizzbuzz = new Fizzbuzz('one');
+		$fizzbuzz->getResult();
+	}
+
 	function test1ShouldReturn1() {
 		$expect = '1';
 		$fizzbuzz = new Fizzbuzz(1);
