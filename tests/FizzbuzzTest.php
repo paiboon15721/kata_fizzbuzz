@@ -30,4 +30,25 @@ class FizzbuzzTest extends PHPUnit_Framework_TestCase {
 		$actual = $fizzbuzz->getResult();
 		$this->assertEquals($expect, $actual);
 	}
+
+	function test4ShouldReturn12fizz4() {
+		$expect = '1, 2, fizz, 4';
+		$fizzbuzz = new Fizzbuzz(4);
+		$actual = $fizzbuzz->getResult();
+		$this->assertEquals($expect, $actual);
+	}
+
+	function test5ShouldReturn12fizz4buzz() {
+		$expect = '1, 2, fizz, 4, buzz';
+		$fizzbuzz = new Fizzbuzz(5);
+		$actual = $fizzbuzz->getResult();
+		$this->assertEquals($expect, $actual);
+	}
+
+	function test15ShouldReturn12fizz4buzz14fizzbuzz() {
+		$expect = '1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz';
+		$fizzbuzz = new Fizzbuzz(15);
+		$actual = $fizzbuzz->getResult();
+		$this->assertEquals($expect, $actual);
+	}
 }

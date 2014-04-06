@@ -10,13 +10,19 @@ class Fizzbuzz {
 		if(!is_numeric($this->number)) {
 			throw new InvalidArgumentException;
 		}
-		
-		if ($this->number == 1) {
-			return 1;
-		} elseif($this->number == 2) {
-			return '1, 2';
-		} else {
-			return '1, 2, fizz';
+		$result = '';
+		for($i = 1; $i <= $this->number; $i++) {
+			if(($i % 3 == 0) and ($i % 5 == 0)) {
+				$result .= 'fizzbuzz, ';
+			} elseif($i % 3 == 0) {
+				$result .= 'fizz, ';
+			} elseif ($i % 5 == 0) {
+				$result .= 'buzz, ';
+			} else {
+				$result .= $i.', ';
+			}
 		}
+		$result = substr($result, 0, -2);
+		return $result;
 	}
 }
